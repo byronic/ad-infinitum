@@ -6,8 +6,8 @@
 
 package online.byronic.console;
 
+import static org.junit.Assert.*;
 import org.junit.Test;
-import static org.junit.Assert.assertTrue;
 
 public class LoggerTest
 {
@@ -20,7 +20,7 @@ public class LoggerTest
 	@Test
 	public void testFailedConsoleCommand()
 	{
-		assertTrue(Logger.cmd("fake command") == false);
+		assertFalse(Logger.cmd("fake command"));
 	}
 	
 	@Test
