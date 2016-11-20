@@ -39,8 +39,8 @@ public interface CharacterI {
 	public String getClassName(); // warrior/oracle/etc
 	public int getLevel(); // level of character, as in level 2 wizard
 	// stats package Vigor, Magic, Charm
-	// TODO: This should be its own class.
-	Statistics stats;
+	public Statistics getStatistics();
+	public Statistics setStatistics(Statistics statistics);
 	
 	// inventory
 	// TODO: Refactor to a class (see equipped items)
