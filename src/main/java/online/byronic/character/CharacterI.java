@@ -6,6 +6,8 @@
  */
 package online.byronic.character;
 
+import online.byronic.stats.Statistics;
+
 // Think of this interface as a character sheet
 public interface CharacterI {
 	/*
@@ -26,7 +28,7 @@ public interface CharacterI {
 	 */
 	
 	// 1. get information regarding the character
-	public String getName(); // the character's real name, be it Longhorn or the horribad Rotide.
+	public String getName(); // the character's real name, be it the virtuous Longhorn or the horribad Rotide.
 	public boolean isAlive();
 	public int getX(); // x coordinate
 	public int getY(); // y coordinate
@@ -38,19 +40,7 @@ public interface CharacterI {
 	public int getLevel(); // level of character, as in level 2 wizard
 	// stats package Vigor, Magic, Charm
 	// TODO: This should be its own class.
-	public int getCurrentVigor();
-	public int getCurrentMagic();
-	public int getCurrentCharm();
-	public int getBaseVigor();
-	public int getBaseMagic();
-	public int getBaseCharm();
-	// stats package -- returns the resultant statistic (i.e. if Vigor is 3, modifyCurrentVigor(5) returns 8
-	public int modifyCurrentVigor(int modification);
-	public int modifyCurrentMagic(int modification);
-	public int modifyCurrentCharm(int modification);
-	public int modifyBaseVigor(int modification);
-	public int modifyBaseMagic(int modification);
-	public int modifyBaseCharm(int modification);
+	Statistics stats;
 	
 	// inventory
 	// TODO: Refactor to a class (see equipped items)
